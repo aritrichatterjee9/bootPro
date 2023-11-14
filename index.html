@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Landing page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        position: relative;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 56px; /* Adjusted height to match navbar */
+        background: #f8f9fa; /* Background color of navbar */
+        z-index: -1;
+      }
+
+      .jumbotron {
+        background-image: url("wall.jpg");
+        background-size: cover;
+        color: white !important;
+        text-align: center;
+        padding: 150px 0; /* Increased padding */
+      }
+
+      #content {
+        text-align: center;
+        margin-top: 100px; /* Increased margin */
+      }
+
+      .card-deck {
+        margin-top: 50px; /* Increased margin */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      .card {
+        margin: 20px; /* Increased margin */
+        flex: 0 1 calc(30% - 40px); /* Adjusted flex calculation */
+      }
+
+      #footer {
+        background-color: #87ceeb;
+        padding: 100px; /* Increased padding */
+        text-align: center;
+      }
+
+      #footer img {
+        width: 200px; /* Increased image width */
+        margin-right: 20px; /* Increased margin */
+      }
+
+      /* Add a custom class for the active state */
+      .navbar-nav .nav-item.active .nav-link {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body data-spy="scroll" data-target="#navbar" data-offset="150">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" id="navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">MyApp</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#jumbotron">Home<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Download MyApp</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="email"
+              placeholder="Email"
+              aria-label="Email"
+            />
+            <input
+              class="form-control me-2"
+              type="password"
+              placeholder="password"
+              aria-label="password"
+            />
+            <button class="btn btn-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="jumbotron" id="jumbotron">
+      <h1 class="display-4">Welcome to MyApp</h1>
+      <p class="lead">Explore and enjoy the features of our amazing app.</p>
+      <hr class="my-4" />
+      <p>Download now and join the MyApp community!</p>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Download MyApp</a>
+    </div>
+
+    <div class="container" id="content">
+      <h1>Why This App is Awesome</h1>
+      <p>This app is awesome to use!</p>
+
+      <div class="card-deck" id="about">
+        <div class="card mb-3">
+          <img src="ph1.png" class="card-img-top" alt="Card Image 1" />
+          <div class="card-body">
+            <h5 class="card-title">Feature 1</h5>
+            <p class="card-text">
+              Description of Feature 1.
+            </p>
+            <p class="card-text">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </p>
+          </div>
+        </div>
+        <div class="card mb-3">
+          <img src="ph1.png" class="card-img-top" alt="Card Image 2" />
+          <div class="card-body">
+            <h5 class="card-title">Feature 2</h5>
+            <p class="card-text">
+              Description of Feature 2.
+            </p>
+            <p class="card-text">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </p>
+          </div>
+        </div>
+        <div class="card mb-3">
+          <img src="ph1.png" class="card-img-top" alt="Card Image 3" />
+          <div class="card-body">
+            <h5 class="card-title">Feature 3</h5>
+            <p class="card-text">
+              Description of Feature 3.
+            </p>
+            <p class="card-text">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <h3>Download the app</h3>
+      <img src="images.png" alt="Footer Image" />
+      <p>&copy; 2023 MyApp. All rights reserved.</p>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
